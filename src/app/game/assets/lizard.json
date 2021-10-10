@@ -1,0 +1,209 @@
+{
+  "textures": [
+    {
+      "image": "lizard.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 18,
+        "h": 195
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "lizard_m_hit_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "lizard_m_run_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 6,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 24,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "lizard_m_run_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 47,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "lizard_m_idle_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 16,
+            "h": 20
+          },
+          "frame": {
+            "x": 1,
+            "y": 70,
+            "w": 16,
+            "h": 20
+          }
+        },
+        {
+          "filename": "lizard_m_idle_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 16,
+            "h": 20
+          },
+          "frame": {
+            "x": 1,
+            "y": 92,
+            "w": 16,
+            "h": 20
+          }
+        },
+        {
+          "filename": "lizard_m_run_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 16,
+            "h": 20
+          },
+          "frame": {
+            "x": 1,
+            "y": 114,
+            "w": 16,
+            "h": 20
+          }
+        },
+        {
+          "filename": "lizard_m_idle_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 9,
+            "w": 16,
+            "h": 19
+          },
+          "frame": {
+            "x": 1,
+            "y": 136,
+            "w": 16,
+            "h": 19
+          }
+        },
+        {
+          "filename": "lizard_m_run_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 10,
+            "w": 16,
+            "h": 18
+          },
+          "frame": {
+            "x": 1,
+            "y": 157,
+            "w": 16,
+            "h": 18
+          }
+        },
+        {
+          "filename": "lizard_m_idle_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 11,
+            "w": 16,
+            "h": 17
+          },
+          "frame": {
+            "x": 1,
+            "y": 177,
+            "w": 16,
+            "h": 17
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:e01a97e7d1abd641afd4edcbada7f928:bf58466ac046f284be31b108785d75d5:3d60b3d24c8a6c98f2f50be7cc542ed6$"
+  }
+}

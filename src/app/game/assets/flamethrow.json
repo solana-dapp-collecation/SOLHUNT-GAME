@@ -1,0 +1,103 @@
+{
+  "textures": [
+    {
+      "image": "texture.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 26,
+        "h": 46
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "flamethrow_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 7,
+            "w": 15,
+            "h": 24
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 15,
+            "h": 24
+          }
+        },
+        {
+          "filename": "flamethrow_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 22
+          },
+          "frame": {
+            "x": 0,
+            "y": 24,
+            "w": 16,
+            "h": 22
+          }
+        },
+        {
+          "filename": "flamethrow_anim_f0.png",
+          "rotated": true,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 7,
+            "w": 12,
+            "h": 11
+          },
+          "frame": {
+            "x": 15,
+            "y": 0,
+            "w": 12,
+            "h": 11
+          }
+        },
+        {
+          "filename": "flamethrow_anim_f3.png",
+          "rotated": true,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 7,
+            "w": 10,
+            "h": 5
+          },
+          "frame": {
+            "x": 15,
+            "y": 12,
+            "w": 10,
+            "h": 5
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6"
+  }
+}

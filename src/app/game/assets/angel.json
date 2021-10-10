@@ -1,0 +1,187 @@
+{
+  "textures": [
+    {
+      "image": "texture.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 196,
+        "h": 334
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "angel_idle_anim_f7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 27,
+            "y": 0,
+            "w": 69,
+            "h": 113
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 69,
+            "h": 113
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 25,
+            "y": 1,
+            "w": 72,
+            "h": 107
+          },
+          "frame": {
+            "x": 0,
+            "y": 113,
+            "w": 72,
+            "h": 107
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 21,
+            "y": 27,
+            "w": 81,
+            "h": 80
+          },
+          "frame": {
+            "x": 69,
+            "y": 0,
+            "w": 81,
+            "h": 80
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 40,
+            "w": 96,
+            "h": 63
+          },
+          "frame": {
+            "x": 0,
+            "y": 220,
+            "w": 96,
+            "h": 63
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 19,
+            "y": 35,
+            "w": 84,
+            "h": 61
+          },
+          "frame": {
+            "x": 72,
+            "y": 80,
+            "w": 84,
+            "h": 61
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 42,
+            "y": 46,
+            "w": 37,
+            "h": 55
+          },
+          "frame": {
+            "x": 72,
+            "y": 141,
+            "w": 37,
+            "h": 55
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 38,
+            "y": 46,
+            "w": 46,
+            "h": 52
+          },
+          "frame": {
+            "x": 150,
+            "y": 0,
+            "w": 46,
+            "h": 52
+          }
+        },
+        {
+          "filename": "angel_idle_anim_f4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 122,
+            "h": 117
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 45,
+            "w": 86,
+            "h": 51
+          },
+          "frame": {
+            "x": 0,
+            "y": 283,
+            "w": 86,
+            "h": 51
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6"
+  }
+}

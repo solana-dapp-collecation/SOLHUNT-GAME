@@ -1,0 +1,188 @@
+{
+  "textures": [
+    {
+      "image": "demon.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 57,
+        "h": 133
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "big_demon_idle_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 7,
+            "w": 28,
+            "h": 29
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 28,
+            "h": 29
+          }
+        },
+        {
+          "filename": "big_demon_idle_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 4,
+            "w": 25,
+            "h": 32
+          },
+          "frame": {
+            "x": 31,
+            "y": 1,
+            "w": 25,
+            "h": 32
+          }
+        },
+        {
+          "filename": "big_demon_idle_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 5,
+            "w": 25,
+            "h": 31
+          },
+          "frame": {
+            "x": 1,
+            "y": 32,
+            "w": 25,
+            "h": 31
+          }
+        },
+        {
+          "filename": "big_demon_run_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 7,
+            "w": 25,
+            "h": 29
+          },
+          "frame": {
+            "x": 28,
+            "y": 35,
+            "w": 25,
+            "h": 29
+          }
+        },
+        {
+          "filename": "big_demon_run_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 1,
+            "w": 24,
+            "h": 35
+          },
+          "frame": {
+            "x": 1,
+            "y": 65,
+            "w": 24,
+            "h": 35
+          }
+        },
+        {
+          "filename": "big_demon_idle_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 4,
+            "w": 24,
+            "h": 32
+          },
+          "frame": {
+            "x": 27,
+            "y": 66,
+            "w": 24,
+            "h": 32
+          }
+        },
+        {
+          "filename": "big_demon_run_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 2,
+            "w": 24,
+            "h": 31
+          },
+          "frame": {
+            "x": 27,
+            "y": 100,
+            "w": 24,
+            "h": 31
+          }
+        },
+        {
+          "filename": "big_demon_run_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 36
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 5,
+            "w": 24,
+            "h": 30
+          },
+          "frame": {
+            "x": 1,
+            "y": 102,
+            "w": 24,
+            "h": 30
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:b2f7e560b657cbb8fb944edd1614fbcd:1a6693d8ed4217ef1f04e394634274a0:77480cee959c6322d08091b7933ffad5$"
+  }
+}

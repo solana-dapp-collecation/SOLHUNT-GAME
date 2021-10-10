@@ -1,0 +1,12 @@
+[programs.localnet]
+gamedata = "A7sZ8VTYRcvPA8yPwmCEvyxYXbEzfCeai3vkymeY1fpk"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/ashik/.config/solana/id.json"
+
+[scripts]
+test = "mocha -t 1000000 tests/"

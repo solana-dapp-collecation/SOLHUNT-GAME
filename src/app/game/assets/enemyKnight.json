@@ -1,0 +1,398 @@
+{
+  "textures": [
+    {
+      "image": "enemyKnight.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 18,
+        "h": 432
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "knight_f_hit_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 16,
+            "h": 25
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 16,
+            "h": 25
+          }
+        },
+        {
+          "filename": "knight_m_hit_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 16,
+            "h": 25
+          },
+          "frame": {
+            "x": 1,
+            "y": 28,
+            "w": 16,
+            "h": 25
+          }
+        },
+        {
+          "filename": "knight_f_run_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 23
+          },
+          "frame": {
+            "x": 1,
+            "y": 55,
+            "w": 16,
+            "h": 23
+          }
+        },
+        {
+          "filename": "knight_f_run_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 23
+          },
+          "frame": {
+            "x": 1,
+            "y": 80,
+            "w": 16,
+            "h": 23
+          }
+        },
+        {
+          "filename": "knight_m_run_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 23
+          },
+          "frame": {
+            "x": 1,
+            "y": 105,
+            "w": 16,
+            "h": 23
+          }
+        },
+        {
+          "filename": "knight_m_run_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 23
+          },
+          "frame": {
+            "x": 1,
+            "y": 130,
+            "w": 16,
+            "h": 23
+          }
+        },
+        {
+          "filename": "knight_f_run_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 6,
+            "w": 16,
+            "h": 22
+          },
+          "frame": {
+            "x": 1,
+            "y": 155,
+            "w": 16,
+            "h": 22
+          }
+        },
+        {
+          "filename": "knight_f_run_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 22
+          },
+          "frame": {
+            "x": 1,
+            "y": 179,
+            "w": 16,
+            "h": 22
+          }
+        },
+        {
+          "filename": "knight_m_run_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 6,
+            "w": 16,
+            "h": 22
+          },
+          "frame": {
+            "x": 1,
+            "y": 203,
+            "w": 16,
+            "h": 22
+          }
+        },
+        {
+          "filename": "knight_m_run_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 16,
+            "h": 22
+          },
+          "frame": {
+            "x": 1,
+            "y": 227,
+            "w": 16,
+            "h": 22
+          }
+        },
+        {
+          "filename": "knight_f_idle_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 251,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_f_idle_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 274,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_f_idle_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 297,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_m_idle_anim_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 320,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_m_idle_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 343,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_m_idle_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 16,
+            "h": 21
+          },
+          "frame": {
+            "x": 1,
+            "y": 366,
+            "w": 16,
+            "h": 21
+          }
+        },
+        {
+          "filename": "knight_f_idle_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 16,
+            "h": 20
+          },
+          "frame": {
+            "x": 1,
+            "y": 389,
+            "w": 16,
+            "h": 20
+          }
+        },
+        {
+          "filename": "knight_m_idle_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 16,
+            "h": 28
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 8,
+            "w": 16,
+            "h": 20
+          },
+          "frame": {
+            "x": 1,
+            "y": 411,
+            "w": 16,
+            "h": 20
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:51856cb61ca12e9500d03558ec824e0e:1ec45513c6832bb7ea97b97322ede0b3:f641a3eb8a52ffc9635d925a98db6fca$"
+  }
+}

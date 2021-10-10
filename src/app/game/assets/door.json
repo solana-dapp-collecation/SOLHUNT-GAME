@@ -1,0 +1,355 @@
+{
+  "textures": [
+    {
+      "image": "texture.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 480,
+        "h": 28
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "door_anim_opening_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 32,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f10.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 64,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f11.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 96,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f12.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 128,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f13.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 160,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 192,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 224,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 256,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 288,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 320,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 352,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f8.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 384,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_anim_opening_f9.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 416,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_fullyopen.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 448,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        },
+        {
+          "filename": "door_closed.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 32,
+            "h": 32
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 4,
+            "w": 32,
+            "h": 28
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 32,
+            "h": 28
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6"
+  }
+}

@@ -1,0 +1,187 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 81,
+				"h": 128
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "reaper_walk_anims_f4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 1,
+						"w": 27,
+						"h": 33
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 33
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 28,
+						"h": 32
+					},
+					"frame": {
+						"x": 0,
+						"y": 33,
+						"w": 28,
+						"h": 32
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 38
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 4,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 0,
+						"y": 65,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 4,
+						"w": 28,
+						"h": 31
+					},
+					"frame": {
+						"x": 0,
+						"y": 97,
+						"w": 28,
+						"h": 31
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 27,
+						"y": 65,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 28,
+						"y": 32,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "reaper_walk_anims_f2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 54,
+						"y": 0,
+						"w": 27,
+						"h": 31
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

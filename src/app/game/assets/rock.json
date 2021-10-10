@@ -1,0 +1,145 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 68,
+				"h": 173
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "rock_walk_anim_f3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 33,
+						"h": 45
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 33,
+						"h": 45
+					}
+				},
+				{
+					"filename": "rock_walk_anim_f4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 3,
+						"w": 33,
+						"h": 44
+					},
+					"frame": {
+						"x": 0,
+						"y": 45,
+						"w": 33,
+						"h": 44
+					}
+				},
+				{
+					"filename": "rock_walk_anim_f2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 33,
+						"h": 43
+					},
+					"frame": {
+						"x": 0,
+						"y": 89,
+						"w": 33,
+						"h": 43
+					}
+				},
+				{
+					"filename": "rock_walk_anim_f5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 35,
+						"h": 41
+					},
+					"frame": {
+						"x": 0,
+						"y": 132,
+						"w": 35,
+						"h": 41
+					}
+				},
+				{
+					"filename": "rock_walk_anim_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 33,
+						"h": 40
+					},
+					"frame": {
+						"x": 33,
+						"y": 0,
+						"w": 33,
+						"h": 40
+					}
+				},
+				{
+					"filename": "rock_walk_anim_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 35,
+						"h": 39
+					},
+					"frame": {
+						"x": 33,
+						"y": 40,
+						"w": 35,
+						"h": 39
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

@@ -1,0 +1,187 @@
+{
+  "textures": [
+    {
+      "image": "texture.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 85,
+        "h": 223
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "burning-ghoul_anims_f7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 15,
+            "y": 14,
+            "w": 33,
+            "h": 46
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 33,
+            "h": 46
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 14,
+            "w": 30,
+            "h": 46
+          },
+          "frame": {
+            "x": 0,
+            "y": 46,
+            "w": 30,
+            "h": 46
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 13,
+            "y": 16,
+            "w": 30,
+            "h": 44
+          },
+          "frame": {
+            "x": 0,
+            "y": 92,
+            "w": 30,
+            "h": 44
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 15,
+            "y": 16,
+            "w": 25,
+            "h": 44
+          },
+          "frame": {
+            "x": 0,
+            "y": 136,
+            "w": 25,
+            "h": 44
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 15,
+            "y": 17,
+            "w": 35,
+            "h": 43
+          },
+          "frame": {
+            "x": 0,
+            "y": 180,
+            "w": 35,
+            "h": 43
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 15,
+            "y": 17,
+            "w": 28,
+            "h": 43
+          },
+          "frame": {
+            "x": 25,
+            "y": 136,
+            "w": 28,
+            "h": 43
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f0.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 9,
+            "y": 19,
+            "w": 32,
+            "h": 41
+          },
+          "frame": {
+            "x": 30,
+            "y": 46,
+            "w": 32,
+            "h": 41
+          }
+        },
+        {
+          "filename": "burning-ghoul_anims_f4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 57,
+            "h": 60
+          },
+          "spriteSourceSize": {
+            "x": 9,
+            "y": 19,
+            "w": 32,
+            "h": 41
+          },
+          "frame": {
+            "x": 53,
+            "y": 0,
+            "w": 32,
+            "h": 41
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6"
+  }
+}

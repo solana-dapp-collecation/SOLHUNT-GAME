@@ -1,0 +1,61 @@
+{
+	"textures": [
+		{
+			"image": "texture.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 18,
+				"h": 55
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "tradecomp_anim_f1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 21,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 18,
+						"h": 28
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 28
+					}
+				},
+				{
+					"filename": "tradecomp_anim_f0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 18,
+						"h": 27
+					},
+					"frame": {
+						"x": 0,
+						"y": 28,
+						"w": 18,
+						"h": 27
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.6"
+	}
+}

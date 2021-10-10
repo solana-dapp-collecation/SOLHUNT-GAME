@@ -1,0 +1,104 @@
+{
+  "textures": [
+    {
+      "image": "coins.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 32,
+        "h": 10
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "coin_anim_f0.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 8,
+            "h": 8
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 8,
+            "h": 8
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 8,
+            "h": 8
+          }
+        },
+        {
+          "filename": "coin_anim_f1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 8,
+            "h": 8
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 0,
+            "w": 6,
+            "h": 8
+          },
+          "frame": {
+            "x": 11,
+            "y": 1,
+            "w": 6,
+            "h": 8
+          }
+        },
+        {
+          "filename": "coin_anim_f3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 8,
+            "h": 8
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 0,
+            "w": 6,
+            "h": 8
+          },
+          "frame": {
+            "x": 19,
+            "y": 1,
+            "w": 6,
+            "h": 8
+          }
+        },
+        {
+          "filename": "coin_anim_f2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 8,
+            "h": 8
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 0,
+            "w": 4,
+            "h": 8
+          },
+          "frame": {
+            "x": 27,
+            "y": 1,
+            "w": 4,
+            "h": 8
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:825b0bbcf6f369bae67ca8d4f569c192:3b24d216000a15119993a95f2e46f017:51f960d29b2cb2ae0010061540f14fb7$"
+  }
+}
