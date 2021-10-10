@@ -5,7 +5,7 @@ import Coin from "../../game/coins";
 import { useWallet } from "@solana/wallet-adapter-react";
 import MyGame, { config } from "../../game/game";
 
-export const Game = ({ connection }: any) => {
+export const Game = ({ connection, gameModel }: any) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const wallet = useWallet();
   const createGame = () => {
@@ -14,7 +14,7 @@ export const Game = ({ connection }: any) => {
       // @ts-expect-error
       root: ref.current,
     });
-    game.scene.add("game", MyGame, true, { connection, wallet });
+    game.scene.add("game", MyGame, true, { connection, wallet, gameModel });
     game.scene.add("heart", Heart, true);
     game.scene.add("coin", Coin, true);
     // @ts-expect-error

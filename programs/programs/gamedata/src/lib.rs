@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("A7sZ8VTYRcvPA8yPwmCEvyxYXbEzfCeai3vkymeY1fpk");
+declare_id!("BKq8QFvCtFLKvXC3kpRD9W4BzAhyz5CvAEmgr3xnYtU7");
 
 #[program]
 pub mod gamedata {

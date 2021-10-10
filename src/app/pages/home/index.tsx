@@ -4,37 +4,36 @@ import { Toolbar, Typography } from "@material-ui/core";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import {
   WalletDisconnectButton,
-  WalletMultiButton
+  WalletMultiButton,
 } from "@solana/wallet-adapter-material-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 import DisconnectIcon from "@material-ui/icons/LinkOff";
 import { SolanaNetworks } from "../../game/game";
 import * as anchor from "@project-serum/anchor";
 import { GameDataModel } from "../../web3/provider/state/model";
+import { Game } from "../game";
 
 const rpcHost = SolanaNetworks.LOCAL;
 const connection = new anchor.web3.Connection(rpcHost);
 
 export const Home = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const wallet = useWallet();
   const [balance, setBalance] = React.useState<number>();
-
-  console.log("connect", connection)
+  const [startGame, setStartGame] = React.useState<boolean>(false)
+  const gameModelRef = React.useRef<GameDataModel>();
 
   React.useEffect(() => {
     (async () => {
-      console.log(connection)
       if (wallet?.publicKey && connection) {
         const balance = await connection.getBalance(wallet.publicKey);
-        console.log(balance);
         setBalance(balance / LAMPORTS_PER_SOL);
       }
     })();
   }, [wallet, connection]);
 
-  useEffect(() => {
-    async function initialize() {
+  async function initialize() {
+    if (wallet?.publicKey && connection) {
       const provider = new anchor.Provider(
         connection,
         // @ts-expect-error
@@ -42,15 +41,17 @@ export const Home = () => {
         {}
       );
       const gameModel = new GameDataModel(provider);
-      gameModel.initialize();
+      await gameModel.initialize();
+      gameModelRef.current = gameModel;
+      setStartGame(true)
     }
-    if(wallet?.publicKey && connection) {
-        initialize();
-    }
-  }, [wallet, connection])
+  }
 
   return (
     <div className="main">
+      <button type="button" onClick={() => initialize()}>
+        Start Game
+      </button>
       <Toolbar style={{ display: "flex" }}>
         {wallet.connected && (
           <div>BALANCE: {(balance || 0).toLocaleString()} SOL</div>
@@ -68,17 +69,7 @@ export const Home = () => {
           />
         )}
       </Toolbar>
-      <div className="header">
-        <h1>Welcome to the Dungeon Crawler</h1>
-        <div
-          className="select-hero"
-          onClick={() => {
-            history.push("/game");
-          }}
-        >
-          <h4>Enter game</h4>
-        </div>
-      </div>
+      {startGame && <Game connection={connection} wallet={wallet} gameModel={gameModelRef.current}  />}
     </div>
   );
 };

@@ -166,16 +166,10 @@ class MyGame extends Phaser.Scene {
     // usersNFTCount()
   }
 
-  async init({ wallet }) {
-    this._wallet = wallet;
-    this._provider = new anchor.Provider(
-      new Connection(SolanaNetworks.LOCAL, opts.preflightCommitment),
-      wallet,
-      opts.preflightCommitment
-    );
-    console.log(this._provider);
-    this._gameModel = new GameDataModel(this._provider);
-    await this._gameModel.initialize();
+  async init({ wallet, gameModel }) {
+    this.gameModel = gameModel;
+    this.result = await gameModel.getCollectedTreasureInfo();
+    console.log(this.result);
   }
 
   preload() {

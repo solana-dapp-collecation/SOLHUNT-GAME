@@ -5,17 +5,29 @@ function bitTest(num, bit) {
   return (num & (1 << bit)) !== 0;
 }
 
+const getBaseAccount = () => {
+  const accountSecret = localStorage.getItem('baseAccountSecret');
+  if(accountSecret) {
+    const secret = JSON.parse(accountSecret)
+    return web3.Keypair.fromSecretKey(secret);
+  }
+  const newBaseAccount = web3.Keypair.generate();
+  console.log(newBaseAccount)
+  window.localStorage.setItem('baseAccountSecret', JSON.stringify(newBaseAccount.secretKey))
+  return newBaseAccount;
+}
+
 
 export class GameDataModel {
   constructor(provider) {
     this.provider = provider;
     this.program = loadGameDataProgram(provider);
-    this.baseAccount = web3.Keypair.generate();
+    this.baseAccount = getBaseAccount();
   }
 
   async initialize() {
-    console.log(this.provider.wallet.publicKey)
-    await this.program.rpc.initialize(new BN(0), {
+    console.log(this.baseAccount)
+    const account = await this.program.rpc.initialize(new BN(0), {
       accounts: {
         myAccount: this.baseAccount.publicKey,
         user: this.provider.wallet.publicKey,
@@ -23,14 +35,16 @@ export class GameDataModel {
       },
       signers: [this.baseAccount]
     });
+    return account;
   }
 
   async getCollectedTreasureInfo() {
     try {
       const account = await this.program.account.myAccount.fetch(
-        this.provider.wallet.publicKey
+        this.baseAccount.publicKey
       );
       this.result = account.data.toNumber();
+      return this.result;
     } catch (err) {
       console.log("Error while fetching collected treasure info", err);
     }
