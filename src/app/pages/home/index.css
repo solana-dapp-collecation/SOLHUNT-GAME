@@ -1,0 +1,22 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.starters {
+  padding-top: 150px;
+}
+.intro h3 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+}

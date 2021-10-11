@@ -7,9 +7,6 @@ export const Routes = () => {
   return (
     <Router>
         <Switch>
-          <Route exact path="/game">
-            <Game />
-          </Route>
           <Route path="/">
             <Home />
           </Route>

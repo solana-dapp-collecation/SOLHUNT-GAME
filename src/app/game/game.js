@@ -168,7 +168,7 @@ class MyGame extends Phaser.Scene {
 
   async init({ wallet, gameModel }) {
     this.gameModel = gameModel;
-    this.result = await gameModel.getCollectedTreasureInfo();
+    // this.result = await gameModel.getCollectedTreasureInfo();
     console.log(this.result);
   }
 
@@ -1564,7 +1564,6 @@ const rewardNFT = () => {
 
 export const config = {
   type: Phaser.AUTO,
-  parent: "phaser-example",
   physics: {
     default: "arcade",
     arcade: {
