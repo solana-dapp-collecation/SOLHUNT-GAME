@@ -7,16 +7,17 @@ import { Topbar } from "./topbar";
 import { useApp } from "../../web3/provider";
 import { useSnackbar } from "notistack";
 interface IntroProps {
-  onStart: () => Promise<void>;
+  onStart: () => void;
   collectedTreasures: number;
+  initialized: boolean;
 }
 
-const Intro: React.FC<IntroProps> = ({ onStart, collectedTreasures }) => {
+const Intro: React.FC<IntroProps> = ({ onStart, collectedTreasures, initialized }) => {
   return (
     <div className="intro">
       <img src={Logo} alt="De dungeon crawlers" />
       <div className="starters">
-        <h3 onClick={onStart}>
+        <h3 className={initialized ? 'initialized' : ''} onClick={onStart}>
           {collectedTreasures ? "Continue" : "New Game"}
         </h3>
       </div>
@@ -34,12 +35,14 @@ export const Home = () => {
     tokenBalance,
     loadingText,
   } = useApp();
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
   const [startGame, setStartGame] = useState(false);
   const [initialized, setInitialized] = useState(false);
 
-  const initialize = async () => {
-    setStartGame(true);
+  const initialize = () => {
+    if (initialized) {
+      setStartGame(true);
+    }
   };
 
   useEffect(() => {
@@ -66,7 +69,7 @@ export const Home = () => {
           enqueueSnackbar={enqueueSnackbar}
         />
       ) : (
-        <Intro onStart={initialize} collectedTreasures={collectedTreasures} />
+        <Intro initialized={initialized} onStart={initialize} collectedTreasures={collectedTreasures} />
       )}
       <div className="loading">
         {loadingText && <h3>Info: {loadingText}</h3>}

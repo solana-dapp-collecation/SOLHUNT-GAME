@@ -12,13 +12,18 @@
 }
 .intro h3 {
   font-weight: 600;
-  color: #fff;
   font-size: 32px;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  cursor: pointer;
+  color: rgb(143, 143, 143);
+  cursor: not-allowed;
+}
+
+.initialized {
+  color: #fff !important;
+  cursor: pointer !important;
 }
 
 .main {

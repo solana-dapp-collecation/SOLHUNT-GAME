@@ -32,7 +32,7 @@ export const useAppState = (
   );
 
   const initilizeStateAccount = async () => {
-    setLoadingText('Loading game data.....')
+    setLoadingText('Loading game data')
     console.log("1", myAccount.publicKey.toString());
     try {
       await program?.rpc.initialize({
