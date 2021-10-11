@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Logo from "../../../assets/logo.png";
-import { useWallet } from "@solana/wallet-adapter-react";
 import { Game } from "../game";
 import "./index.css";
 import { SnackbarProvider } from "notistack";
 import { Topbar } from "./topbar";
+import { useApp } from "../../web3/provider";
 interface IntroProps {
   onStart: () => Promise<void>;
 }
@@ -23,12 +23,19 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
 };
 
 export const Home = () => {
-  const wallet = useWallet();
+  const { loadWallet, initilizeStateAccount, collectTreasures, tokenAccount } = useApp();
   const [startGame, setStartGame] = useState(false);
 
+  console.log(tokenAccount);
+
   const initialize = async () => {
+    await initilizeStateAccount();
     setStartGame(true);
   }
+
+  useEffect(() => {
+    loadWallet();
+  }, [])
 
   return (
     <SnackbarProvider maxSnack={5} autoHideDuration={8000}>
@@ -36,7 +43,7 @@ export const Home = () => {
         <Topbar />
         {startGame ? (
           <Game
-            wallet={wallet}
+            collectTreasures={collectTreasures}
           />
         ) : (
           <Intro onStart={initialize} />

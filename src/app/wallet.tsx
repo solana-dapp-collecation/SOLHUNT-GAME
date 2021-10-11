@@ -14,6 +14,7 @@ import {
 } from "@solana/wallet-adapter-react";
 
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
+import AppProvider from "./web3/provider";
 
 const network = "mainnet-beta";
 
@@ -28,7 +29,9 @@ const WalletWrapper = ({ children }: any) => {
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
-        <WalletDialogProvider>{children}</WalletDialogProvider>
+        <WalletDialogProvider>
+          <AppProvider>{children}</AppProvider>
+        </WalletDialogProvider>
       </WalletProvider>
     </ConnectionProvider>
   );

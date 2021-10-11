@@ -6,16 +6,18 @@ import {
   WalletMultiButton,
 } from "@solana/wallet-adapter-material-ui";
 import DisconnectIcon from "@material-ui/icons/LinkOff";
+import { useApp } from "../../web3/provider";
 
 export const Topbar = () => {
   const wallet = useWallet();
+  const {collectedTreasures} = useApp()
   return (
     <Toolbar style={{ display: "flex" }}>
       <Typography
         component="h1"
         variant="h6"
         style={{ flexGrow: 1 }}
-      ></Typography>
+      >{collectedTreasures}</Typography>
       <WalletMultiButton />
       {wallet.connected && (
         <WalletDisconnectButton

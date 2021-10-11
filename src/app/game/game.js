@@ -119,12 +119,6 @@ import Tradecomp from "./treasure/tradecomp";
 import Torchburn from "./treasure/torchburn";
 import Walltorch from "./treasure/walltorch";
 
-// import DungeonToken from "../blockchain/src/abis/DungeonToken.json";
-// import TropyChar from "../blockchain/src/abis/TrophyChar.json";
-import { Connection } from "@solana/web3.js";
-// import { GameDataModel } from "./components/web3/provider/state/model";
-import * as anchor from "@project-serum/anchor";
-import { GameDataModel } from "../web3/provider/state/model";
 
 var cursors;
 var faune;
@@ -166,10 +160,9 @@ class MyGame extends Phaser.Scene {
     // usersNFTCount()
   }
 
-  async init({ wallet, gameModel }) {
-    this.gameModel = gameModel;
-    // this.result = await gameModel.getCollectedTreasureInfo();
-    console.log(this.result);
+  async init({ collectTreasures }) {
+    this.collectTreasures = collectTreasures;
+    console.log(this.collectTreasures);
   }
 
   preload() {
@@ -320,10 +313,7 @@ class MyGame extends Phaser.Scene {
         /* @type {demon} */
         const chest = go;
         count++;
-        chest.count = count + 1;
-        if (count === 1) {
-          chest.anims.play("chest-empty-open");
-        }
+        chest.id = count + 1;
         chest.body.onCollide = true;
       },
     });
@@ -1077,7 +1067,7 @@ class MyGame extends Phaser.Scene {
     if (obj2.anims.currentAnim.key !== "chest-empty-open") {
       console.log(obj2);
       coin = coin + 10;
-      mintReward();
+      this.mintReward(obj2.id);
       console.log("coinCOunt", coin);
       sceneEvents.emit("player-coin-mint", coin);
       obj2.anims.play("chest-empty-open");
@@ -1553,11 +1543,12 @@ class MyGame extends Phaser.Scene {
       }
     }
   }
-}
 
-const mintReward = () => {
-  console.log("called");
-};
+  mintReward(id) {
+    this.collectTreasures(id)
+
+  }
+}
 
 const rewardNFT = () => {
 };

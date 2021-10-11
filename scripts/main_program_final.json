@@ -1,0 +1,136 @@
+{
+  "version": "0.0.0",
+  "name": "main_program_final",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "myAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initializeAdminAccount",
+      "accounts": [
+        {
+          "name": "admin",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "adminDepositTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "totalAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "update",
+      "accounts": [
+        {
+          "name": "myAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "gameUser",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "gameUserReceiveTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "adminMainAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaDepositTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "EscrowAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "adminKey",
+            "type": "publicKey"
+          },
+          {
+            "name": "adminDepositTokenAccount",
+            "type": "publicKey"
+          },
+          {
+            "name": "totalAmount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MyAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "AQTbQ65AthN5DK7aG3omaesMN8rDfCcUA1SirK8v8hDU"
+  }
+}
