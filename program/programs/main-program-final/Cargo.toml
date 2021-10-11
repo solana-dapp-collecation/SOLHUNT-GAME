@@ -1,12 +1,12 @@
 [package]
-name = "gamedata"
+name = "programfinal"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2018"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "gamedata"
+name = "programfinal"
 
 [features]
 no-entrypoint = []
@@ -16,3 +16,5 @@ default = []
 
 [dependencies]
 anchor-lang = "0.13.2"
+anchor-spl = "0.13.2"
+spl-token = { version = "3.1.1", features = ["no-entrypoint"] }

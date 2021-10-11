@@ -14,12 +14,8 @@ import {
 } from "@solana/wallet-adapter-react";
 
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
-import { SolanaNetworks } from "./game/game";
 
 const network = "mainnet-beta";
-
-const rpcHost = SolanaNetworks.LOCAL;
-const connection = new anchor.web3.Connection(rpcHost);
 
 const WalletWrapper = ({ children }: any) => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
@@ -29,19 +25,10 @@ const WalletWrapper = ({ children }: any) => {
     []
   );
 
-  const childrenWithProps = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      console.log("here", connection);
-      // @ts-expect-error
-      return React.cloneElement(child, { connection });
-    }
-    return child;
-  });
-
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
-        <WalletDialogProvider>{childrenWithProps}</WalletDialogProvider>
+        <WalletDialogProvider>{children}</WalletDialogProvider>
       </WalletProvider>
     </ConnectionProvider>
   );
