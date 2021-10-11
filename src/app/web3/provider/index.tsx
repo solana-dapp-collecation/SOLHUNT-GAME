@@ -81,7 +81,7 @@ const AppProviderProvider: React.FC<AppProviderProviderProps> = ({
     }
   }, [provider]);
 
-  const { initilizeStateAccount, collectTreasures, collectedTreasures, tokenBalance } = useAppState(provider, tokenAccount, loadTokenAccount)
+  const { initilizeStateAccount, collectTreasures, collectedTreasures, tokenBalance } = useAppState(provider, tokenAccount, loadTokenAccount, setLoadingText)
   // const appState = useAppState(provider, tokenAccount, setLoadingText);
 
   const value = useMemo<AppProviderContextType>(

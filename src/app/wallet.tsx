@@ -1,39 +1,23 @@
-import { useMemo } from "react";
+import { SnackbarProvider } from "notistack";
 import React from "react";
-import * as anchor from "@project-serum/anchor";
-import { clusterApiUrl } from "@solana/web3.js";
-import {
-  getPhantomWallet,
-  getSolflareWallet,
-  getSolletWallet,
-} from "@solana/wallet-adapter-wallets";
+import Slide from "@material-ui/core/Slide";
 
-import {
-  ConnectionProvider,
-  WalletProvider,
-} from "@solana/wallet-adapter-react";
-
-import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 import AppProvider from "./web3/provider";
 
-const network = "mainnet-beta";
-
 const WalletWrapper = ({ children }: any) => {
-  const endpoint = useMemo(() => clusterApiUrl(network), []);
-
-  const wallets = useMemo(
-    () => [getPhantomWallet(), getSolletWallet(), getSolflareWallet()],
-    []
-  );
-
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletDialogProvider>
-          <AppProvider>{children}</AppProvider>
-        </WalletDialogProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    <SnackbarProvider
+      maxSnack={1}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "center",
+      }}
+      // @ts-expect-error
+      TransitionComponent={Slide}
+      autoHideDuration={5000}
+    >
+      <AppProvider>{children}</AppProvider>
+    </SnackbarProvider>
   );
 };
 

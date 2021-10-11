@@ -145,11 +145,17 @@ function bitTest(num, bit) {
 }
 
 class MyGame extends Phaser.Scene {
-  init({ collectTreasures, collectedTreasures, tokenBalance }) {
+  init({
+    collectTreasures,
+    collectedTreasures,
+    tokenBalance,
+    enqueueSnackbar,
+  }) {
     this.collectTreasures = collectTreasures;
     this.collectedTreasures = collectedTreasures;
-    console.log("balance",tokenBalance);
-    this.tokenBalance = tokenBalance
+    console.log("balance", tokenBalance);
+    this.tokenBalance = tokenBalance;
+    this.enqueueSnackbar = enqueueSnackbar;
   }
 
   preload() {
@@ -205,7 +211,7 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.scene.run("game-ui");
-    this.scene.run("coins", { tokenBalance: this.tokenBalance});
+    this.scene.run("coins", { tokenBalance: this.tokenBalance });
 
     createCharacterAnims(this.anims);
     createLizardAnims(this.anims);
@@ -1060,6 +1066,10 @@ class MyGame extends Phaser.Scene {
       console.log("coinCOunt", this.tokenBalance);
       sceneEvents.emit("player-coin-mint", this.tokenBalance);
       obj2.anims.play("chest-empty-open");
+    } else {
+      this.enqueueSnackbar("Treasure already collected", {
+        preventDuplicate: true,
+      });
     }
   }
 
@@ -1107,7 +1117,9 @@ class MyGame extends Phaser.Scene {
   handlePlayerDoorCollide(obj1, obj2) {
     console.log("key", keyCount);
     if (keyCount === 0) {
-      alert("FIND KEY!!");
+      this.enqueueSnackbar("FIND KEY!!", {
+        preventDuplicate: true,
+      });
       obj2.anims.play("door-closed");
     }
     if (keyCount === 1) {
@@ -1129,7 +1141,9 @@ class MyGame extends Phaser.Scene {
   handlePlayerDoorwoodCollide(obj1, obj2) {
     console.log("key", keyCount);
     if (keyCount === 0) {
-      alert("FIND KEY!!");
+      this.enqueueSnackbar("FIND KEY!!", {
+        preventDuplicate: true,
+      });
       obj2.anims.play("doorwood-closed");
     }
     if (keyCount === 1) {

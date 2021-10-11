@@ -20,7 +20,8 @@ const myAccount = getAccountFromStorage();
 export const useAppState = (
   provider: Provider | undefined,
   tokenAccount: AccountInfo | undefined,
-  loadTokenAccount: () => Promise<AccountInfo>
+  loadTokenAccount: () => Promise<AccountInfo>,
+  setLoadingText: (text: string) => void,
 ) => {
   const [collectedTreasures, setCollectedTreasures] = useState(0);
   const [tokenBalance, setTokenBalance] = useState(0);
@@ -31,6 +32,7 @@ export const useAppState = (
   );
 
   const initilizeStateAccount = async () => {
+    setLoadingText('Loading game data.....')
     console.log("1", myAccount.publicKey.toString());
     try {
       await program?.rpc.initialize({
@@ -62,6 +64,7 @@ export const useAppState = (
       console.log("token balance", _gameUserReceiveTokenAccount.amount.toNumber())
       setTokenBalance(_gameUserReceiveTokenAccount.amount.toNumber())
     }
+    setLoadingText('')
     setInit(true);
   };
 

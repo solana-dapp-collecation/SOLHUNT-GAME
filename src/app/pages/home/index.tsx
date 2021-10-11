@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../../assets/logo.png";
 import { Game } from "../game";
 import "./index.css";
-import { SnackbarProvider } from "notistack";
 import { Topbar } from "./topbar";
 import { useApp } from "../../web3/provider";
+import { useSnackbar } from "notistack";
 interface IntroProps {
   onStart: () => Promise<void>;
   collectedTreasures: number;
@@ -32,11 +32,11 @@ export const Home = () => {
     tokenAccount,
     collectedTreasures,
     tokenBalance,
+    loadingText,
   } = useApp();
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [startGame, setStartGame] = useState(false);
   const [initialized, setInitialized] = useState(false);
-
-  console.log(tokenAccount);
 
   const initialize = async () => {
     setStartGame(true);
@@ -56,19 +56,18 @@ export const Home = () => {
   }, [tokenAccount, initialized]);
 
   return (
-    <SnackbarProvider maxSnack={5} autoHideDuration={8000}>
-      <div className="main">
-        <Topbar />
-        {startGame ? (
-          <Game
-            collectTreasures={collectTreasures}
-            collectedTreasures={collectedTreasures}
-            tokenBalance={tokenBalance}
-          />
-        ) : (
-          <Intro onStart={initialize} collectedTreasures={collectedTreasures} />
-        )}
-      </div>
-    </SnackbarProvider>
+    <div className="main">
+      <Topbar />
+      {startGame ? (
+        <Game
+          collectTreasures={collectTreasures}
+          collectedTreasures={collectedTreasures}
+          tokenBalance={tokenBalance}
+          enqueueSnackbar={enqueueSnackbar}
+        />
+      ) : (
+        <Intro onStart={initialize} collectedTreasures={collectedTreasures} />
+      )}
+    </div>
   );
 };
