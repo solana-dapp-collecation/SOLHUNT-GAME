@@ -5,6 +5,7 @@ import { loadMainProgram } from "../../program";
 import { getTokenAccount } from "../account/tokenAccount";
 import { escrowAccount, mintPublicKey } from "../account/mint";
 import { PublicKey } from "@solana/web3.js";
+import { getAccountFromStorage } from "../../utils";
 
 const getEscrowAccount = (
   provider: Provider,
@@ -14,7 +15,7 @@ const getEscrowAccount = (
   return program.account.escrowAccount.fetch(escrowAccPublicKey);
 };
 
-const myAccount = web3.Keypair.generate();
+const myAccount = getAccountFromStorage();
 
 export const useAppState = (
   provider: Provider | undefined,
@@ -30,28 +31,31 @@ export const useAppState = (
 
   const initilizeStateAccount = async () => {
     console.log("1", myAccount.publicKey.toString());
-    await program?.rpc.initialize({
-      accounts: {
-        myAccount: myAccount.publicKey,
-        rent: web3.SYSVAR_RENT_PUBKEY,
-      },
-      signers: [myAccount],
-      instructions: [
-        await program.account.myAccount.createInstruction(myAccount),
-      ],
-    });
+    try {
+      await program?.rpc.initialize({
+        accounts: {
+          myAccount: myAccount.publicKey,
+          rent: web3.SYSVAR_RENT_PUBKEY,
+        },
+        signers: [myAccount],
+        instructions: [
+          await program.account.myAccount.createInstruction(myAccount),
+        ],
+      });
+    } catch (err) {
+      console.log("account already exists");
+    }
 
     const account = await program?.account.myAccount.fetch(myAccount.publicKey);
     //@ts-ignore
     console.log(account?.data?.toString());
     // @ts-expect-error
-    setCollectedTreasures(account?.data?.toNumber())
+    setCollectedTreasures(account?.data?.toNumber());
     setInit(true);
   };
 
   const collectTreasures = async (level: number) => {
-
-    const escrow = escrowAccount
+    const escrow = escrowAccount;
 
     console.log("2", myAccount.publicKey.toString());
     console.log("Token Account", tokenAccount);
@@ -118,8 +122,7 @@ export const useAppState = (
         //@ts-ignore
         console.log(account?.data?.toString());
         //@ts-expect-error
-        setCollectedTreasures(account?.data?.toNumber())
-
+        setCollectedTreasures(account?.data?.toNumber());
 
         // const _gameUserReceiveTokenAccount = await getTokenAccount(
         //   provider,

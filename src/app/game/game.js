@@ -130,7 +130,6 @@ var damageHealthState = "damageHealthState";
 var healthState = idleHealthState;
 var damageTime = 0;
 var knives;
-var knife;
 var coin = 0;
 var wall_health = 4;
 var keyCount = 0;
@@ -142,27 +141,15 @@ var tradecomp;
 
 let speed = 150;
 
-export const SolanaNetworks = {
-  DEV: "https://api.devnet.solana.com",
-  TEST: "https://api.testnet.solana.com",
-  MAIN: "https://api.mainnet-beta.solana.com",
-  LOCAL: "http://127.0.0.1:8899",
-};
-
-const opts = {
-  preflightCommitment: "processed"
+function bitTest(num, bit) {
+  return (num & (1 << bit)) !== 0;
 }
-class MyGame extends Phaser.Scene {
-  constructor() {
-    super();
-    // loadWeb3()
-    //loadBlockchainData()
-    // usersNFTCount()
-  }
 
-  async init({ collectTreasures }) {
+class MyGame extends Phaser.Scene {
+
+  async init({ collectTreasures, collectedTreasures }) {
     this.collectTreasures = collectTreasures;
-    console.log(this.collectTreasures);
+    this.collectedTreasures = collectedTreasures;
   }
 
   preload() {
@@ -313,7 +300,10 @@ class MyGame extends Phaser.Scene {
         /* @type {demon} */
         const chest = go;
         count++;
-        chest.id = count + 1;
+        chest.id = count;
+        if(bitTest(this.collectedTreasures, count)) {
+          chest.anims.play("chest-empty-open");
+        }
         chest.body.onCollide = true;
       },
     });
@@ -1066,7 +1056,7 @@ class MyGame extends Phaser.Scene {
 
     if (obj2.anims.currentAnim.key !== "chest-empty-open") {
       console.log(obj2);
-      coin = coin + 10;
+      coin = coin + 20;
       this.mintReward(obj2.id);
       console.log("coinCOunt", coin);
       sceneEvents.emit("player-coin-mint", coin);
