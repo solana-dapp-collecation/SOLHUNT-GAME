@@ -14,6 +14,10 @@ export default class Coin extends Phaser.Scene {
     super({ key: "coins" });
   }
 
+  init({ tokenBalance }) {
+    this.tokenBalance = tokenBalance
+  }
+
   preload() {
     //this.load.image('heart-full', fullHeart)
   }
@@ -23,7 +27,7 @@ export default class Coin extends Phaser.Scene {
       classType: Phaser.GameObjects.Image,
     });
 
-    this.coinCount = this.add.text(23, 23, coin);
+    this.coinCount = this.add.text(23, 23, this.tokenBalance);
     this.keyCount = this.add.text(23, 38, key);
     this.chainlink_count = this.add.text(24, 59, chainlink);
 
@@ -75,6 +79,7 @@ export default class Coin extends Phaser.Scene {
   }
 
   handlePlayerCoinMint(coin) {
+    console.log(coin);
     this.coinCount.setText(coin);
   }
 

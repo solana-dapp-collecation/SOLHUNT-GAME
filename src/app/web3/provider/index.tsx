@@ -31,6 +31,7 @@ interface AppProviderContextType {
   collectTreasures: (level: number) => Promise<void>;
   loadingText: string;
   collectedTreasures: number;
+  tokenBalance: number;
 }
 
 const AppProviderContext = createContext<AppProviderContextType>(
@@ -80,7 +81,7 @@ const AppProviderProvider: React.FC<AppProviderProviderProps> = ({
     }
   }, [provider]);
 
-  const { initilizeStateAccount, collectTreasures, collectedTreasures } = useAppState(provider, tokenAccount, loadTokenAccount)
+  const { initilizeStateAccount, collectTreasures, collectedTreasures, tokenBalance } = useAppState(provider, tokenAccount, loadTokenAccount)
   // const appState = useAppState(provider, tokenAccount, setLoadingText);
 
   const value = useMemo<AppProviderContextType>(
@@ -93,6 +94,7 @@ const AppProviderProvider: React.FC<AppProviderProviderProps> = ({
       initilizeStateAccount,
       collectTreasures,
       collectedTreasures,
+      tokenBalance,
       loadingText: tokenAccountCreateLoading
         ? "Creating token account"
         : loadingText,

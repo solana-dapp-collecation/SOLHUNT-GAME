@@ -23,6 +23,7 @@ export const useAppState = (
   loadTokenAccount: () => Promise<AccountInfo>
 ) => {
   const [collectedTreasures, setCollectedTreasures] = useState(0);
+  const [tokenBalance, setTokenBalance] = useState(0);
   const [init, setInit] = useState(false);
   const program = useMemo(
     () => provider && loadMainProgram(provider),
@@ -51,6 +52,16 @@ export const useAppState = (
     console.log(account?.data?.toString());
     // @ts-expect-error
     setCollectedTreasures(account?.data?.toNumber());
+
+    if(provider && tokenAccount) {
+      const _gameUserReceiveTokenAccount = await getTokenAccount(
+        provider,
+        mintPublicKey,
+        tokenAccount.address
+      );
+      console.log("token balance", _gameUserReceiveTokenAccount.amount.toNumber())
+      setTokenBalance(_gameUserReceiveTokenAccount.amount.toNumber())
+    }
     setInit(true);
   };
 
@@ -124,11 +135,12 @@ export const useAppState = (
         //@ts-expect-error
         setCollectedTreasures(account?.data?.toNumber());
 
-        // const _gameUserReceiveTokenAccount = await getTokenAccount(
-        //   provider,
-        //   mintPublicKey,
-        //   tokenAccount.address
-        // );
+        const _gameUserReceiveTokenAccount = await getTokenAccount(
+          provider,
+          mintPublicKey,
+          tokenAccount.address
+        );
+        setTokenBalance(_gameUserReceiveTokenAccount.amount.toNumber())
 
         // console.log(
         //   "Token account amount",
@@ -156,5 +168,6 @@ export const useAppState = (
     initilizeStateAccount,
     collectTreasures,
     collectedTreasures,
+    tokenBalance
   };
 };

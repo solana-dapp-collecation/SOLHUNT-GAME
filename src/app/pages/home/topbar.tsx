@@ -10,14 +10,14 @@ import { useApp } from "../../web3/provider";
 
 export const Topbar = () => {
   const wallet = useWallet();
-  const {collectedTreasures} = useApp()
+  const {tokenBalance} = useApp()
   return (
     <Toolbar style={{ display: "flex" }}>
       <Typography
         component="h1"
         variant="h6"
-        style={{ flexGrow: 1 }}
-      >{collectedTreasures}</Typography>
+        style={{ flexGrow: 1, color: '#fff' }}
+      >Token balance: {tokenBalance}</Typography>
       <WalletMultiButton />
       {wallet.connected && (
         <WalletDisconnectButton

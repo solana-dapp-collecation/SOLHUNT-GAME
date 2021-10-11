@@ -119,7 +119,6 @@ import Tradecomp from "./treasure/tradecomp";
 import Torchburn from "./treasure/torchburn";
 import Walltorch from "./treasure/walltorch";
 
-
 var cursors;
 var faune;
 var hit = 0;
@@ -146,10 +145,11 @@ function bitTest(num, bit) {
 }
 
 class MyGame extends Phaser.Scene {
-
-  async init({ collectTreasures, collectedTreasures }) {
+  init({ collectTreasures, collectedTreasures, tokenBalance }) {
     this.collectTreasures = collectTreasures;
     this.collectedTreasures = collectedTreasures;
+    console.log("balance",tokenBalance);
+    this.tokenBalance = tokenBalance
   }
 
   preload() {
@@ -205,7 +205,7 @@ class MyGame extends Phaser.Scene {
 
   create() {
     this.scene.run("game-ui");
-    this.scene.run("coins");
+    this.scene.run("coins", { tokenBalance: this.tokenBalance});
 
     createCharacterAnims(this.anims);
     createLizardAnims(this.anims);
@@ -301,7 +301,7 @@ class MyGame extends Phaser.Scene {
         const chest = go;
         count++;
         chest.id = count;
-        if(bitTest(this.collectedTreasures, count)) {
+        if (bitTest(this.collectedTreasures, count)) {
           chest.anims.play("chest-empty-open");
         }
         chest.body.onCollide = true;
@@ -315,7 +315,6 @@ class MyGame extends Phaser.Scene {
     chests.get(1481, 1401, "treasure").setImmovable();
     chests.get(930, 56, "treasure").setImmovable();
     chests.get(1010, 56, "treasure").setImmovable();
-    sceneEvents.emit("player-coin-mint", coin);
 
     const doors = this.physics.add.group({
       classType: doorz,
@@ -1056,10 +1055,10 @@ class MyGame extends Phaser.Scene {
 
     if (obj2.anims.currentAnim.key !== "chest-empty-open") {
       console.log(obj2);
-      coin = coin + 20;
+      this.tokenBalance = this.tokenBalance + 20;
       this.mintReward(obj2.id);
-      console.log("coinCOunt", coin);
-      sceneEvents.emit("player-coin-mint", coin);
+      console.log("coinCOunt", this.tokenBalance);
+      sceneEvents.emit("player-coin-mint", this.tokenBalance);
       obj2.anims.play("chest-empty-open");
     }
   }
@@ -1535,13 +1534,11 @@ class MyGame extends Phaser.Scene {
   }
 
   mintReward(id) {
-    this.collectTreasures(id)
-
+    this.collectTreasures(id);
   }
 }
 
-const rewardNFT = () => {
-};
+const rewardNFT = () => {};
 
 export const config = {
   type: Phaser.AUTO,

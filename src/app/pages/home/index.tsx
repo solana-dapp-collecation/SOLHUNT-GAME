@@ -31,6 +31,7 @@ export const Home = () => {
     collectTreasures,
     tokenAccount,
     collectedTreasures,
+    tokenBalance,
   } = useApp();
   const [startGame, setStartGame] = useState(false);
   const [initialized, setInitialized] = useState(false);
@@ -62,6 +63,7 @@ export const Home = () => {
           <Game
             collectTreasures={collectTreasures}
             collectedTreasures={collectedTreasures}
+            tokenBalance={tokenBalance}
           />
         ) : (
           <Intro onStart={initialize} collectedTreasures={collectedTreasures} />
