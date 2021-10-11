@@ -68,6 +68,9 @@ export const Home = () => {
       ) : (
         <Intro onStart={initialize} collectedTreasures={collectedTreasures} />
       )}
+      <div className="loading">
+        {loadingText && <h3>Info: {loadingText}</h3>}
+      </div>
     </div>
   );
 };
