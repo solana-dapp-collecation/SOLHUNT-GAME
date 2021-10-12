@@ -37,7 +37,7 @@ import torchburnJson from "./assets/torch_burn.json";
 import torchburnPng from "./assets/torch_burn.png";
 import walltorchJson from "./assets/torch.json";
 import walltorchPng from "./assets/torch.png";
-import chainlinkPng from "./assets/chainlink.png";
+import chainlinkPng from "./assets/solana.svg";
 import weapon from "./assets/weapon_knife.png";
 import chestPng from "./assets/chest.png";
 import chestJson from "./assets/chest.json";
