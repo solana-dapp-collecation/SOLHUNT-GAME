@@ -1061,6 +1061,9 @@ class MyGame extends Phaser.Scene {
 
     if (obj2.anims.currentAnim.key !== "chest-empty-open") {
       console.log(obj2);
+      this.enqueueSnackbar("Treasure collected", {
+        preventDuplicate: true,
+      })
       this.tokenBalance = this.tokenBalance + 20;
       this.mintReward(obj2.id);
       console.log("coinCOunt", this.tokenBalance);
