@@ -37,4 +37,4 @@ npm run initialize
 npm start
 ```
 
-view share ride at [http://localhost:3000/](http://localhost:3000/)
+view game at [http://localhost:3000/](http://localhost:3000/)
