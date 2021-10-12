@@ -1,4 +1,4 @@
-import { Provider, web3, BN } from "@project-serum/anchor";
+import { Provider, web3, BN, Wallet } from "@project-serum/anchor";
 import { AccountInfo, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { useMemo, useState } from "react";
 import { loadMainProgram } from "../../program";
@@ -6,6 +6,24 @@ import { getTokenAccount } from "../account/tokenAccount";
 import { escrowAccount, mintPublicKey } from "../account/mint";
 import { PublicKey } from "@solana/web3.js";
 import { getAccountFromStorage } from "../../utils";
+import { awaitTransactionSignatureConfirmation, getCandyMachineState, mintOneToken } from "../../nft/reward";
+
+const candyMachineId = new web3.PublicKey(
+  process.env.REACT_APP_CANDY_MACHINE_ID!
+);
+
+const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
+const connection = new web3.Connection(rpcHost);
+
+const treasury = new web3.PublicKey(
+  process.env.REACT_APP_TREASURY_ADDRESS!
+);
+
+const config = new web3.PublicKey(
+  process.env.REACT_APP_CANDY_MACHINE_CONFIG!
+);
+
+const txTimeout = 30000;
 
 const getEscrowAccount = (
   provider: Provider,
@@ -31,6 +49,7 @@ export const useAppState = (
     () => provider && loadMainProgram(provider),
     [provider]
   );
+  const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
 
   const initilizeStateAccount = async () => {
     setLoadingText('Loading game data')
@@ -170,11 +189,41 @@ export const useAppState = (
     }
   };
 
+  const rewardNFT = async () => {
+    if(!provider?.wallet) {
+      return;
+    }
+    console.log("minting reward")
+    const {
+      candyMachine,
+    } = await getCandyMachineState(
+      provider.wallet as Wallet,
+      candyMachineId,
+      connection
+    );
+    const mintTxId = await mintOneToken(
+      candyMachine,
+      config,
+      provider.wallet?.publicKey,
+      treasury
+    );
+
+    const status = await awaitTransactionSignatureConfirmation(
+      mintTxId,
+      txTimeout,
+      connection,
+      "singleGossip",
+      false
+    );
+    console.log(status);
+  }
+
   return {
     initilizeStateAccount,
     collectTreasures,
     collectedTreasures,
     tokenBalance,
-    tokenBalanceLoading
+    tokenBalanceLoading,
+    rewardNFT
   };
 };
