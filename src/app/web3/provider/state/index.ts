@@ -25,6 +25,7 @@ export const useAppState = (
 ) => {
   const [collectedTreasures, setCollectedTreasures] = useState(0);
   const [tokenBalance, setTokenBalance] = useState(0);
+  const [tokenBalanceLoading, setTokenBalanceLoading] = useState(false);
   const [init, setInit] = useState(false);
   const program = useMemo(
     () => provider && loadMainProgram(provider),
@@ -70,7 +71,7 @@ export const useAppState = (
 
   const collectTreasures = async (level: number) => {
     const escrow = escrowAccount;
-
+    setTokenBalanceLoading(true);
     console.log("2", myAccount.publicKey.toString());
     console.log("Token Account", tokenAccount);
     if (provider && tokenAccount) {
@@ -144,6 +145,8 @@ export const useAppState = (
           tokenAccount.address
         );
         setTokenBalance(_gameUserReceiveTokenAccount.amount.toNumber())
+        setTokenBalanceLoading(false);
+
 
         // console.log(
         //   "Token account amount",
@@ -171,6 +174,7 @@ export const useAppState = (
     initilizeStateAccount,
     collectTreasures,
     collectedTreasures,
-    tokenBalance
+    tokenBalance,
+    tokenBalanceLoading
   };
 };
