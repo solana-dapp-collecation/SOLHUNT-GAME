@@ -1063,13 +1063,13 @@ class MyGame extends Phaser.Scene {
       console.log(obj2);
       this.enqueueSnackbar("Treasure collected", {
         preventDuplicate: true,
-      })
+      });
       this.tokenBalance = this.tokenBalance + 20;
       this.mintReward(obj2.id);
       console.log("coinCOunt", this.tokenBalance);
       sceneEvents.emit("player-coin-mint", this.tokenBalance);
       obj2.anims.play("chest-empty-open");
-    } else {
+    } else if (bitTest(this.collectedTreasures, obj2.id)) {
       this.enqueueSnackbar("Treasure already collected", {
         preventDuplicate: true,
       });
