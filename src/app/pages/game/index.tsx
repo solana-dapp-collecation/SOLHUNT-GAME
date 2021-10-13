@@ -5,7 +5,7 @@ import Coin from "../../game/coins";
 import MyGame, { config } from "../../game/game";
 import "./index.css";
 
-export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enqueueSnackbar }: any) => {
+export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enqueueSnackbar, rewardNFT, closeSnackbar }: any) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const [gameCreated, setGameCreated] = useState(false);
   const createGame = () => {
@@ -14,7 +14,7 @@ export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enque
       // @ts-expect-error
       parent: ref.current,
     });
-    game.scene.add("game", MyGame, true, { collectTreasures, collectedTreasures, tokenBalance, enqueueSnackbar });
+    game.scene.add("game", MyGame, true, { collectTreasures, collectedTreasures, tokenBalance, enqueueSnackbar, rewardNFT, closeSnackbar });
     game.scene.add("heart", Heart, true);
     game.scene.add("coin", Coin, true, { tokenBalance });
     // @ts-expect-error

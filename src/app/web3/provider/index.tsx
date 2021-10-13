@@ -33,6 +33,7 @@ interface AppProviderContextType {
   collectedTreasures: number;
   tokenBalance: number;
   tokenBalanceLoading: boolean;
+  rewardNFT: () => Promise<void>
 }
 
 const AppProviderContext = createContext<AppProviderContextType>(
@@ -88,6 +89,7 @@ const AppProviderProvider: React.FC<AppProviderProviderProps> = ({
     collectedTreasures,
     tokenBalance,
     tokenBalanceLoading,
+    rewardNFT,
   } = useAppState(provider, tokenAccount, loadTokenAccount, setLoadingText);
   // const appState = useAppState(provider, tokenAccount, setLoadingText);
 
@@ -103,6 +105,7 @@ const AppProviderProvider: React.FC<AppProviderProviderProps> = ({
       collectedTreasures,
       tokenBalance,
       tokenBalanceLoading,
+      rewardNFT,
       loadingText: tokenAccountCreateLoading
         ? "Creating token account"
         : loadingText,
