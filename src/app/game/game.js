@@ -1566,13 +1566,13 @@ class MyGame extends Phaser.Scene {
   }
 
   async rewardNFT() {
-    this.enqueueSnackbar("Congratulation! Adding NFT to your wallet", {
+    this.enqueueSnackbar("Congratulations! Adding NFT to your wallet", {
       variant: "success",
       preventDuplicate: true,
       persist: true,
     });
     await this.reward();
-    this.closeSnackbar("Congratulation! Adding NFT to your wallet");
+    this.closeSnackbar("Congratulations! Adding NFT to your wallet");
     this.enqueueSnackbar("Success! NFT is added to your wallet", {
       preventDuplicate: true,
       variant: "success",
