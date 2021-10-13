@@ -8,6 +8,16 @@ This app requires the following dependancies. Before continuing, download and in
 - [Anchor](https://project-serum.github.io/anchor/getting-started/installation.html#install-solana) Install version v0.13.2
 - [Solana Tool Suite](https://docs.solana.com/cli/install-solana-cli-tools)
 
+## Update Environment Variables
+
+Add candy machine config to .env
+
+```
+cp .env.example .env
+```
+
+For this demo we have added our env variables, Feel free to update them.
+
 ## Running the program locally
 
 ```
