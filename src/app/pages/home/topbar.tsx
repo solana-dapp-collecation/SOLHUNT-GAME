@@ -26,7 +26,7 @@ const style = {
 };
 
 export const Topbar = () => {
-  const { tokenBalance, wallet, tokenBalanceLoading, rewardNFT } = useApp();
+  const { tokenBalance, wallet, tokenBalanceLoading } = useApp();
   const [showSwap, setShowSwap] = useState(false);
   const [tokenList, setTokenList] = useState<TokenListContainer>();
   const { enqueueSnackbar } = useSnackbar();
@@ -97,9 +97,6 @@ export const Topbar = () => {
           </Typography>
         )}
       </div>
-      <Button variant="contained" onClick={rewardNFT}>
-        Reward NFT
-      </Button>
       <Button variant="contained" onClick={() => setShowSwap(true)}>
         Swap Dungeon Tokens
       </Button>
