@@ -98,7 +98,7 @@ export const Topbar = () => {
         )}
       </div>
       <Button variant="contained" onClick={() => setShowSwap(true)}>
-        Swap Dungeon Tokens
+        Swap SOLHUNT Tokens
       </Button>
       {tokenList && (
         <Modal onClose={() => setShowSwap(false)} open={showSwap}>
