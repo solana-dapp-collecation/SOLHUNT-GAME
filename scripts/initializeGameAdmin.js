@@ -5,17 +5,22 @@ const TOKEN_SUPPLY = 100000;
 const programIdl = require("./main_program_final.json");
 const fs = require("fs");
 
+// const adata = anchor.web3.Keypair.generate();
+// console.log(adata.secretKey.toString());
+// console.log(adata.secretKey);
+// console.log(Buffer.from(adata.secretKey).toString("base64"));
+
 const gameAdmin = anchor.web3.Keypair.fromSecretKey(
   new Uint8Array([
-    17, 234, 191, 156, 54, 200, 228, 103, 149, 55, 38, 248, 177, 190, 119, 204,
-    38, 244, 252, 29, 69, 72, 122, 202, 104, 187, 64, 183, 76, 72, 56, 99, 239,
-    54, 240, 203, 210, 1, 197, 55, 121, 237, 74, 132, 207, 194, 255, 44, 62,
-    144, 180, 200, 68, 221, 180, 216, 254, 247, 138, 238, 10, 161, 146, 153,
+    216, 177, 200, 103, 17, 130, 47, 113, 219, 79, 190, 82, 51, 94, 163, 44, 92,
+    55, 52, 105, 242, 118, 122, 159, 95, 59, 129, 133, 127, 106, 76, 163, 65,
+    179, 232, 105, 127, 40, 194, 115, 78, 221, 59, 41, 90, 245, 99, 77, 112,
+    227, 221, 109, 96, 154, 84, 1, 76, 5, 227, 80, 178, 37, 127, 32,
   ])
 );
 
 const provider = new anchor.Provider(
-  new Connection("http://localhost:8899"),
+  new Connection("https://api.devnet.solana.com"),
   new anchor.Wallet(gameAdmin),
   {}
 );
@@ -131,7 +136,7 @@ const main = async (admin) => {
   );
 
   fs.writeFile(
-    "../src/app/web3/account.json",
+    "./src/app/web3/account.json",
     JSON.stringify({
       escrowAccount,
       mint: mint.publicKey.toString(),
