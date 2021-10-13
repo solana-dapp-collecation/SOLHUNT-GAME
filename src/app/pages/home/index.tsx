@@ -15,7 +15,7 @@ interface IntroProps {
 const Intro: React.FC<IntroProps> = ({ onStart, collectedTreasures, initialized }) => {
   return (
     <div className="intro">
-      <img src={Logo} alt="De dungeon crawlers" />
+      <img src={Logo} alt="Solhunt" />
       <div className="starters">
         <h3 className={initialized ? 'initialized' : ''} onClick={onStart}>
           {collectedTreasures ? "Continue" : "New Game"}

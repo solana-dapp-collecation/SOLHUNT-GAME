@@ -1,4 +1,4 @@
-## De Dungeon Crawlers
+## Solhunt
 
 ## Quick Start
 
