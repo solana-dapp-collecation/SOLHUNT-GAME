@@ -150,12 +150,16 @@ class MyGame extends Phaser.Scene {
     collectedTreasures,
     tokenBalance,
     enqueueSnackbar,
+    rewardNFT,
+    closeSnackbar,
   }) {
     this.collectTreasures = collectTreasures;
     this.collectedTreasures = collectedTreasures;
     console.log("balance", tokenBalance);
     this.tokenBalance = tokenBalance;
     this.enqueueSnackbar = enqueueSnackbar;
+    this.reward = rewardNFT;
+    this.closeSnackbar = closeSnackbar;
   }
 
   preload() {
@@ -1061,9 +1065,6 @@ class MyGame extends Phaser.Scene {
 
     if (obj2.anims.currentAnim.key !== "chest-empty-open") {
       console.log(obj2);
-      this.enqueueSnackbar("Treasure collected", {
-        preventDuplicate: true,
-      });
       this.tokenBalance = this.tokenBalance + 20;
       this.mintReward(obj2.id);
       console.log("coinCOunt", this.tokenBalance);
@@ -1095,7 +1096,7 @@ class MyGame extends Phaser.Scene {
   handleplayerchainlinkcollide(obj1, obj2) {
     if (chainlink_count === 0) {
       chainlink_count = chainlink_count + 1;
-      rewardNFT();
+      this.rewardNFT();
       //obj2.destroy()
       console.log("keyCOunt", chainlink_count);
       sceneEvents.emit("player-chainlink-mint", chainlink_count);
@@ -1550,12 +1551,34 @@ class MyGame extends Phaser.Scene {
     }
   }
 
-  mintReward(id) {
-    this.collectTreasures(id);
+  async mintReward(id) {
+    this.enqueueSnackbar("Treasure collected! Adding tokens to your wallet", {
+      variant: "success",
+      preventDuplicate: true,
+      persist: true,
+    });
+    await this.collectTreasures(id);
+    this.closeSnackbar("Treasure collected! Adding tokens to your wallet");
+    this.enqueueSnackbar("Token added to your wallet", {
+      preventDuplicate: true,
+      variant: "success",
+    });
+  }
+
+  async rewardNFT() {
+    this.enqueueSnackbar("Congratulation! Adding NFT to your wallet", {
+      variant: "success",
+      preventDuplicate: true,
+      persist: true,
+    });
+    await this.reward();
+    this.closeSnackbar("Congratulation! Adding NFT to your wallet");
+    this.enqueueSnackbar("Success! NFT is added to your wallet", {
+      preventDuplicate: true,
+      variant: "success",
+    });
   }
 }
-
-const rewardNFT = () => {};
 
 export const config = {
   type: Phaser.AUTO,

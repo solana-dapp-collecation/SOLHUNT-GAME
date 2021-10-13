@@ -34,8 +34,9 @@ export const Home = () => {
     collectedTreasures,
     tokenBalance,
     loadingText,
+    rewardNFT,
   } = useApp();
-  const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [startGame, setStartGame] = useState(false);
   const [initialized, setInitialized] = useState(false);
 
@@ -67,6 +68,8 @@ export const Home = () => {
           collectedTreasures={collectedTreasures}
           tokenBalance={tokenBalance}
           enqueueSnackbar={enqueueSnackbar}
+          closeSnackbar={closeSnackbar}
+          rewardNFT={rewardNFT}
         />
       ) : (
         <Intro initialized={initialized} onStart={initialize} collectedTreasures={collectedTreasures} />

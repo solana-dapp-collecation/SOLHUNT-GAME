@@ -6,24 +6,7 @@ import { getTokenAccount } from "../account/tokenAccount";
 import { escrowAccount, mintPublicKey } from "../account/mint";
 import { PublicKey } from "@solana/web3.js";
 import { getAccountFromStorage } from "../../utils";
-import { awaitTransactionSignatureConfirmation, getCandyMachineState, mintOneToken } from "../../nft/reward";
-
-const candyMachineId = new web3.PublicKey(
-  process.env.REACT_APP_CANDY_MACHINE_ID!
-);
-
-const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
-const connection = new web3.Connection(rpcHost);
-
-const treasury = new web3.PublicKey(
-  process.env.REACT_APP_TREASURY_ADDRESS!
-);
-
-const config = new web3.PublicKey(
-  process.env.REACT_APP_CANDY_MACHINE_CONFIG!
-);
-
-const txTimeout = 30000;
+import { awaitTransactionSignatureConfirmation, candyMachineId, config, connection, getCandyMachineState, mintOneToken, treasury, txTimeout } from "../../nft/reward";
 
 const getEscrowAccount = (
   provider: Provider,
