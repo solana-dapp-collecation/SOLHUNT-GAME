@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { useCallback } from "react";
-import { Connection, PublicKey } from "@solana/web3.js";
+import { Connection } from "@solana/web3.js";
 import { SolanaWallet } from "./types";
 import { Provider, Provider as SolanaProvider } from "@project-serum/anchor";
 // import { AppState, useAppState } from "./state";

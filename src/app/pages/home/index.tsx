@@ -27,7 +27,6 @@ const Intro: React.FC<IntroProps> = ({ onStart, collectedTreasures, initialized 
 
 export const Home = () => {
   const {
-    loadWallet,
     initilizeStateAccount,
     collectTreasures,
     tokenAccount,
@@ -45,10 +44,6 @@ export const Home = () => {
       setStartGame(true);
     }
   };
-
-  useEffect(() => {
-    loadWallet();
-  }, []);
 
   useEffect(() => {
     (async () => {

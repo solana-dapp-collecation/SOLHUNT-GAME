@@ -32,8 +32,6 @@ export const useAppState = (
     () => provider && loadMainProgram(provider),
     [provider]
   );
-  const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-
   const initilizeStateAccount = async () => {
     setLoadingText('Loading game data')
     console.log("1", myAccount.publicKey.toString());
@@ -207,6 +205,6 @@ export const useAppState = (
     collectedTreasures,
     tokenBalance,
     tokenBalanceLoading,
-    rewardNFT
+    rewardNFT,
   };
 };

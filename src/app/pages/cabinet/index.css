@@ -1,0 +1,43 @@
+.nfts-container {
+  background: #000;
+  min-height: 100vh;
+}
+
+.nfts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto;
+  padding: 30px;
+  gap: 40px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.nft {
+  background-color: rgb(35, 35, 37);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nft img {
+  height: 200px;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.description {
+  text-align: center;
+  color: #fff;
+}

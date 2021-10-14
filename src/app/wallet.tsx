@@ -3,6 +3,7 @@ import React from "react";
 import Slide from "@material-ui/core/Slide";
 
 import AppProvider from "./web3/provider";
+import { Middleware } from "./pages/middleware";
 
 const WalletWrapper = ({ children }: any) => {
   return (
@@ -16,7 +17,9 @@ const WalletWrapper = ({ children }: any) => {
       TransitionComponent={Slide}
       autoHideDuration={5000}
     >
-      <AppProvider>{children}</AppProvider>
+      <AppProvider>
+        <Middleware>{children}</Middleware>
+      </AppProvider>
     </SnackbarProvider>
   );
 };

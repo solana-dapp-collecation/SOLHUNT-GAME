@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { CircularProgress, Toolbar, Typography } from "@material-ui/core";
+import {
+  Badge,
+  CircularProgress,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
 import { useApp } from "../../web3/provider";
 import { Button, Modal } from "@mui/material";
 import Swap from "@project-serum/swap-ui";
@@ -12,6 +17,7 @@ import { useSnackbar } from "notistack";
 import { NotifyingProvider } from "./notifyer";
 import { NodeWallet } from "@project-serum/anchor/dist/provider";
 import { Box } from "@mui/system";
+import { useHistory, useLocation } from "react-router";
 
 const style = {
   position: "absolute",
@@ -30,6 +36,10 @@ export const Topbar = () => {
   const [showSwap, setShowSwap] = useState(false);
   const [tokenList, setTokenList] = useState<TokenListContainer>();
   const { enqueueSnackbar } = useSnackbar();
+  const history = useHistory();
+  const location = useLocation();
+
+  const isCabinet = location.pathname === "/cabinet";
 
   const [provider] = useMemo(() => {
     const opts: ConfirmOptions = {
@@ -69,7 +79,23 @@ export const Topbar = () => {
   }, [enqueueSnackbar, wallet]);
 
   useEffect(() => {
-    new TokenListProvider().resolve().then(setTokenList);
+    new TokenListProvider().resolve().then((list) => {
+      const currentList = [...list.getList()].map((t) => {
+        if (t.symbol === "ASF") {
+          return {
+            ...t,
+            symbol: "DGN",
+            name: "Solhunt Token",
+            logoURI:
+              "https://github.com/Sagar133/RPG-Solidity-Game/raw/master/blockchain/src/assets/Castle.png",
+          };
+        }
+        return t;
+      });
+      const newlist = new TokenListContainer(currentList);
+      console.log(newlist);
+      setTokenList(newlist);
+    });
   }, [setTokenList]);
 
   return (
@@ -97,9 +123,32 @@ export const Topbar = () => {
           </Typography>
         )}
       </div>
-      <Button variant="contained" onClick={() => setShowSwap(true)}>
-        Swap SOLHUNT Tokens
-      </Button>
+      {isCabinet ? (
+        <Button
+          style={{ background: "rgb(153, 69, 255)", marginRight: "20px" }}
+          variant="contained"
+          onClick={() => history.push("/")}
+        >
+          Game
+        </Button>
+      ) : (
+        <Button
+          style={{ background: "rgb(153, 69, 255)", marginRight: "20px" }}
+          variant="contained"
+          onClick={() => history.push("/cabinet")}
+        >
+          Trophies
+        </Button>
+      )}
+      <Badge badgeContent={"Alpha"} color="primary">
+        <Button
+          style={{ background: "rgb(153, 69, 255)" }}
+          variant="contained"
+          onClick={() => setShowSwap(true)}
+        >
+          Swap SOLHUNT Tokens
+        </Button>
+      </Badge>
       {tokenList && (
         <Modal onClose={() => setShowSwap(false)} open={showSwap}>
           {/** @ts-expect-error */}
