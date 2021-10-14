@@ -2,7 +2,7 @@ import axios from "axios";
 import { SolanaWallet } from "../../web3/provider/types";
 
 export const getUserNFTs = async (wallet: SolanaWallet) => {
-  const { data } = await axios.post(" http://api.devnet.solana.com", {
+  const { data } = await axios.post("https://api.devnet.solana.com", {
     jsonrpc: "2.0",
     id: 1,
     method: "getTokenAccountsByOwner",
