@@ -123,6 +123,15 @@ export const Topbar = () => {
           </Typography>
         )}
       </div>
+      <Button
+        style={{ background: "rgb(153, 69, 255)", marginRight: "20px" }}
+        variant="contained"
+        onClick={() =>
+          window.open("https://solbros.github.io/solhunt-store", "_blank")
+        }
+      >
+        Store
+      </Button>
       {isCabinet ? (
         <Button
           style={{ background: "rgb(153, 69, 255)", marginRight: "20px" }}
