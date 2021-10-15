@@ -18,6 +18,7 @@ import { NotifyingProvider } from "./notifyer";
 import { NodeWallet } from "@project-serum/anchor/dist/provider";
 import { Box } from "@mui/system";
 import { useHistory, useLocation } from "react-router";
+import castle from "../../../assets/castle.png";
 
 const style = {
   position: "absolute",
@@ -86,8 +87,7 @@ export const Topbar = () => {
             ...t,
             symbol: "DUN",
             name: "Solhunt Token",
-            logoURI:
-              "https://github.com/Sagar133/RPG-Solidity-Game/raw/master/blockchain/src/assets/Castle.png",
+            logoURI: castle,
           };
         }
         return t;
