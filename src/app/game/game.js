@@ -8,7 +8,9 @@ import tilsetcastle from "./assets/castle.png";
 import tilsetpillar from "./assets/pillar.png";
 import tilsetwalldecor from "./assets/walldecor.png";
 import heroJson from "./assets/hero.json";
+import greenJson from "./assets/green.json";
 import heroPng from "./assets/hero.png";
+import greenPng from "./assets/green.png";
 import lizardPng from "./assets/lizard.png";
 import lizardJson from "./assets/lizard.json";
 import plantZombieJson from "./assets/plantZombie.json";
@@ -152,6 +154,7 @@ class MyGame extends Phaser.Scene {
     enqueueSnackbar,
     rewardNFT,
     closeSnackbar,
+    character,
   }) {
     this.collectTreasures = collectTreasures;
     this.collectedTreasures = collectedTreasures;
@@ -160,6 +163,7 @@ class MyGame extends Phaser.Scene {
     this.enqueueSnackbar = enqueueSnackbar;
     this.reward = rewardNFT;
     this.closeSnackbar = closeSnackbar;
+    this.character = character || "faune";
   }
 
   preload() {
@@ -172,6 +176,7 @@ class MyGame extends Phaser.Scene {
     this.load.image("tilsetwalldecor", tilsetwalldecor);
     this.load.tilemapTiledJSON("dungeon", dungenMap);
     this.load.atlas("faune", heroPng, heroJson);
+    this.load.atlas("green", greenPng, greenJson);
     this.load.atlas("lizard", lizardPng, lizardJson);
     this.load.atlas("treasure", chestPng, chestJson);
     this.load.atlas("coin", coinPng, coinJson);
@@ -217,7 +222,7 @@ class MyGame extends Phaser.Scene {
     this.scene.run("game-ui");
     this.scene.run("coins", { tokenBalance: this.tokenBalance });
 
-    createCharacterAnims(this.anims);
+    createCharacterAnims(this.anims, this.character);
     createLizardAnims(this.anims);
     createdZombieAnims(this.anims);
     createdemonAnims(this.anims);
@@ -284,7 +289,8 @@ class MyGame extends Phaser.Scene {
     SkeletonLayer.setCollisionByProperty({ collides: true });
     wallsLayer.setCollisionByProperty({ collides: true });
 
-    faune = this.physics.add.sprite(128, 128, "faune", "walk-down-3.png");
+
+    faune = this.physics.add.sprite(128, 128, this.character, "walk-down-3.png");
     faune.body.setSize(faune.width * 0.5, faune.height * 0.8);
 
     //tradecomp = this.physics.add.image(160,150,'tradecomp')

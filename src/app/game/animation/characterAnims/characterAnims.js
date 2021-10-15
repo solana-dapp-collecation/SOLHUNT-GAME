@@ -1,23 +1,23 @@
 
-export const createCharacterAnims = (anims) => {
+export const createCharacterAnims = (anims, character) => {
   anims.create({
     key: "faune-idel-down",
-    frames: [{ key: "faune", frame: "walk-down-3.png" }],
+    frames: [{ key: character, frame: "walk-down-3.png" }],
   });
 
   anims.create({
     key: "faune-idel-side",
-    frames: [{ key: "faune", frame: "walk-side-3.png" }],
+    frames: [{ key: character, frame: "walk-side-3.png" }],
   });
 
   anims.create({
     key: "faune-idel-up",
-    frames: [{ key: "faune", frame: "walk-up-3.png" }],
+    frames: [{ key: character, frame: "walk-up-3.png" }],
   });
 
   anims.create({
     key: "faune-run-down",
-    frames: anims.generateFrameNames("faune", {
+    frames: anims.generateFrameNames(character, {
       start: 1,
       end: 8,
       prefix: "run-down-",
@@ -29,7 +29,7 @@ export const createCharacterAnims = (anims) => {
 
   anims.create({
     key: "faune-run-up",
-    frames: anims.generateFrameNames("faune", {
+    frames: anims.generateFrameNames(character, {
       start: 1,
       end: 8,
       prefix: "run-up-",
@@ -41,7 +41,7 @@ export const createCharacterAnims = (anims) => {
 
   anims.create({
     key: "faune-run-side",
-    frames: anims.generateFrameNames("faune", {
+    frames: anims.generateFrameNames(character, {
       start: 1,
       end: 8,
       prefix: "run-side-",
@@ -53,7 +53,7 @@ export const createCharacterAnims = (anims) => {
 
   anims.create({
     key: "faune-faint",
-    frames: anims.generateFrameNames("faune", {
+    frames: anims.generateFrameNames(character, {
       start: 1,
       end: 4,
       prefix: "faint-",
