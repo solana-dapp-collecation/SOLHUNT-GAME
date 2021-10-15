@@ -29,7 +29,7 @@ SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blo
 
 <p>
  <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/game%20github.png" alt="Logo" width="480" height="240">
- <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/dao.png" alt="Logo" width="480" height="240">
+ <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/dao.png" alt="Logo" width="460" height="220">
 </p>
 
 ![image](https://user-images.githubusercontent.com/43913734/137470795-cfd95f0c-2649-448f-a7ce-18c8249a79fd.png)
@@ -83,7 +83,7 @@ npm start
 
 view game at [http://localhost:3000/](http://localhost:3000/)
 
-### Screenshots
+### Gameplay
 
 ![image](./screenshots/1.png)
 
@@ -96,3 +96,7 @@ view game at [http://localhost:3000/](http://localhost:3000/)
 ![image](./screenshots/5.png)
 
 ![image](./screenshots/6.png)
+![image](https://user-images.githubusercontent.com/43913734/137474402-21b6b7fc-68e7-49ad-b5a8-0abb6d4baa29.png)
+
+
+```
