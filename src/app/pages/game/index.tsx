@@ -16,6 +16,7 @@ export const getCharacter = () => {
 export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enqueueSnackbar, rewardNFT, closeSnackbar }: any) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const [gameCreated, setGameCreated] = useState(false);
+  const gameRef = React.useRef<Phaser.Game>();
   const createGame = () => {
     const game = new Phaser.Game({
       ...config,
@@ -27,6 +28,7 @@ export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enque
     game.scene.add("coin", Coin, true, { tokenBalance });
     // @ts-expect-error
     game.scene.start(MyGame);
+    gameRef.current = game;
     setGameCreated(true);
   };
   React.useEffect(() => {
@@ -34,5 +36,13 @@ export const Game = ({ collectTreasures, collectedTreasures, tokenBalance, enque
       createGame();
     }
   }, [gameCreated]);
+
+  React.useEffect(() => {
+    return () => {
+      if(gameRef.current) {
+        gameRef.current.destroy(true);
+      }
+    }
+  }, [])
   return <div className="game" ref={ref} />;
 };
