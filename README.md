@@ -11,7 +11,7 @@
   <p>Play SOLHunt game online at <a href="https://solhunt.surge.sh">here</a></p>
   <p>Visit SOLHunt store at <a href="https://solbros.github.io/solhunt-store">here</a></p>
   
-  <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
+  <p align="center"><a href="https://www.youtube.com/watch?v=SISGTRfX3LE">Watch Demo Video on YouTube</a></p>
 
 # ARCHITECTURE
 
