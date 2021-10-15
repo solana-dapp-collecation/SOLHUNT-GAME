@@ -84,7 +84,7 @@ export const Topbar = () => {
         if (t.symbol === "ASF") {
           return {
             ...t,
-            symbol: "DGN",
+            symbol: "DUN",
             name: "Solhunt Token",
             logoURI:
               "https://github.com/Sagar133/RPG-Solidity-Game/raw/master/blockchain/src/assets/Castle.png",
