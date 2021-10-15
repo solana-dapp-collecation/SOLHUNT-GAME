@@ -8,8 +8,8 @@
   <img src="https://github.com/Sagar133/RPG-Solidity-Game/blob/master/src/assets/logotype-solana-ignition-2.svg" alt="Logo" width="120" height="120">
   </p>
 
-  <p><a href="https://solhunt.surge.sh">Game link</a></p>
-  <p><a href="https://solbros.github.io/solhunt-store">Store link</a></p>
+  <p>Play SOLHunt game online at <a href="https://solhunt.surge.sh">here</a></p>
+  <p>Visit SOLHunt store at <a href="https://solbros.github.io/solhunt-store">here</a></p>
   
   <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
 
