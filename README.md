@@ -11,11 +11,13 @@
   <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
 
 # FEATURES
+
 SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blockchain, built with Phaser. Our motivation is to enable users to own what you earn
+
 - 🎮 In Game Store
 - 🎮 NFT rewards as Level Passes
 - 🎮 $DUN(SOLHunt) Token Rewards as Loot (SPL token)
-- 🎮 Metaplex Game storefront for buying game characters and using them as game assets as NFT. Every character is Rare and has unique abilities. 
+- 🎮 Metaplex Game storefront for buying game characters and using them as game assets as NFT. Every character is Rare and has unique abilities.
 - 🎮 Decentralised storage powered by ARWEAVE
 - 🎮 Swap $SOL for $DUN(game token), on serum DEX swap (ALPHA) in game to deposit token in escrow to play (COMING SOON)
 - 🎮 SOLHunt DAO to reward game-artists assets through voting on Solana using $DUN token.
@@ -25,9 +27,7 @@ SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blo
  <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/dao.png" alt="Logo" width="480" height="240">
 </p>
 
-
 ![image](https://user-images.githubusercontent.com/43913734/137470795-cfd95f0c-2649-448f-a7ce-18c8249a79fd.png)
-
 
 ## Quick Start
 
@@ -77,3 +77,17 @@ npm start
 ```
 
 view game at [http://localhost:3000/](http://localhost:3000/)
+
+### Screenshots
+
+![image](./screenshots/1.png)
+
+![image](./screenshots/2.png)
+
+![image](./screenshots/3.png)
+
+![image](./screenshots/4.png)
+
+![image](./screenshots/5.png)
+
+![image](./screenshots/6.png)
