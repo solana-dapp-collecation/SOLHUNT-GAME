@@ -7,6 +7,9 @@
   <h6>Built at Solana Ignition Hackathon 2021</h6>
   <img src="https://github.com/Sagar133/RPG-Solidity-Game/blob/master/src/assets/logotype-solana-ignition-2.svg" alt="Logo" width="120" height="120">
   </p>
+
+  <p><a href="https://solhunt.surge.sh">Game link</a></p>
+  <p><a href="https://solbros.github.io/solhunt-store">Store link</a></p>
   
   <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
 
