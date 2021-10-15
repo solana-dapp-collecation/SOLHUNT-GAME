@@ -13,6 +13,10 @@
   
   <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
 
+# ARCHITECTURE
+
+![image](./screenshots/flow.jpg)
+
 # FEATURES
 
 SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blockchain, built with Phaser. Our motivation is to enable users to own what you earn
