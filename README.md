@@ -17,6 +17,7 @@
 
 SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blockchain, built with Phaser. Our motivation is to enable users to own what you earn
 
+**GAME DATA IS STORED ON-CHAIN WHICH MEANS THAT THE USER CAN'T COLLECT TREASURE (SPL TOKENS) PREVIOUSLY COLLECTED**
 - 🎮 Secure authentication with phantom wallet
 - 🎮 In Game Store
 - 🎮 NFT rewards as Level Passes
