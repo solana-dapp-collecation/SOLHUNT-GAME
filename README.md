@@ -1,4 +1,33 @@
-## Solhunt
+<h1 align="center">SOLHunt - Play.Win.Earn</h1>
+
+<p align="center">
+  <a href="https://github.com/niftysubs/niftysubs">
+    <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/SOLHunt.png" alt="Logo" width="480" height="240">
+  </a>
+  <h6>Built at Solana Ignition Hackathon 2021</h6>
+  <img src="https://github.com/Sagar133/RPG-Solidity-Game/blob/master/src/assets/logotype-solana-ignition-2.svg" alt="Logo" width="120" height="120">
+  </p>
+  
+  <p align="center"><a href="#">Watch Demo Video on YouTube</a></p>
+
+# FEATURES
+SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blockchain, built with Phaser. Our motivation is to enable users to own what you earn
+- 🎮 In Game Store
+- 🎮 NFT rewards as Level Passes
+- 🎮 $DUN(SOLHunt) Token Rewards as Loot (SPL token)
+- 🎮 Metaplex Game storefront for buying game characters and using them as game assets as NFT. Every character is Rare and has unique abilities. 
+- 🎮 Decentralised storage powered by ARWEAVE
+- 🎮 Swap $SOL for $DUN(game token), on serum DEX swap (ALPHA) in game to deposit token in escrow to play (COMING SOON)
+- 🎮 SOLHunt DAO to reward game-artists assets through voting on Solana using $DUN token.
+
+<p>
+ <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/game%20github.png" alt="Logo" width="480" height="240">
+ <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/dao.png" alt="Logo" width="480" height="240">
+</p>
+
+
+![image](https://user-images.githubusercontent.com/43913734/137470795-cfd95f0c-2649-448f-a7ce-18c8249a79fd.png)
+
 
 ## Quick Start
 
