@@ -1,11 +1,11 @@
 <h1 align="center">SOLHunt - Play.Win.Earn</h1>
 
 <p align="center">
-  <a href="https://github.com/niftysubs/niftysubs">
-    <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/SOLHunt.png" alt="Logo" width="480" height="240">
+  <a href="/">
+    <img src="./screenshots/7.png" alt="Logo" width="480" height="240">
   </a>
   <h6>Built at Solana Ignition Hackathon 2021</h6>
-  <img src="https://github.com/Sagar133/RPG-Solidity-Game/blob/master/src/assets/logotype-solana-ignition-2.svg" alt="Logo" width="120" height="120">
+  <img src="./screenshots/12.svg" alt="Logo" width="120" height="120">
   </p>
 
   <p>Play SOLHunt game online at <a href="https://solhunt.surge.sh">here</a></p>
@@ -22,6 +22,7 @@
 SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blockchain, built with Phaser. Our motivation is to enable users to own what you earn
 
 **GAME DATA IS STORED ON-CHAIN WHICH MEANS THAT THE USER CAN'T COLLECT TREASURE (SPL TOKENS) PREVIOUSLY COLLECTED**
+
 - 🎮 Secure authentication with phantom wallet
 - 🎮 In Game Store
 - 🎮 NFT rewards as Level Passes
@@ -33,11 +34,11 @@ SOLHunt is a lightweight pixel Play To Earn dungeon game built on the Solana Blo
 - 🎮 SOLHunt DAO to reward game-artists assets through voting on Solana using $DUN token.
 
 <p>
- <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/game%20github.png" alt="Logo" width="480" height="240">
- <img src="https://github.com/SOLBROS/SolHunt-GamePlay/blob/master/src/assets/dao.png" alt="Logo" width="460" height="220">
+ <img src="./screenshots/8.png" alt="Logo" width="480" height="240">
+ <img src="./screenshots/11.png" alt="Logo" width="460" height="220">
 </p>
 
-![image](https://user-images.githubusercontent.com/43913734/137470795-cfd95f0c-2649-448f-a7ce-18c8249a79fd.png)
+![image](./screenshots/9.png)
 
 ## Quick Start
 
@@ -101,7 +102,8 @@ view game at [http://localhost:3000/](http://localhost:3000/)
 ![image](./screenshots/5.png)
 
 ![image](./screenshots/6.png)
-![image](https://user-images.githubusercontent.com/43913734/137474402-21b6b7fc-68e7-49ad-b5a8-0abb6d4baa29.png)
+![image](./screenshots/10.png)
 
+```
 
 ```
